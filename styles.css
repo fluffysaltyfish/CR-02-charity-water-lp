@@ -25,11 +25,11 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 /* General Reset */
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
 }
 
 /* Header */
@@ -54,59 +54,329 @@ Fonts:
 }
 
 .sign-in {
-  background-color: #ffd100;
+  background-color: #ffc907;
   border: none;
   padding: 10px 20px;
   font-weight: bold;
-  color: #004d7a;
+  color: #003366;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 1.5rem;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Change the sign-in button color when you hover over it */
+.sign-in:hover {
+  background-color: #ff902a; /* Orange color on hover */
+  color: #003366;            /* Keep text color the same */
 }
 
 /* Hero Section */
 .hero-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  background-color: #fef9ee;
+  padding: 0;
+  background-color: #fff7e1;
+}
+
+/* Make the image responsive and rounded */
+/* Make the hero image stay on the left side */
+/* The image will always be aligned to the left of the hero section */
+.hero-image {
+  width: 60%; /* Set a fixed width for the image container */
+  margin-right: 0; /* Add some space to the right of the image */
+  height: auto; 
+  border-radius: 30px;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .hero-content {
-  max-width: 500px;
-  margin-left: 40px;
+  max-width: 600px;
+  margin-right: 5px;
 }
 
 .hero-content h1 {
-  font-size: 2rem;
-  color: #517b99;
-  margin-bottom: 20px;
+  font-family: 'Proxima Nova';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  color: #77a8bb;
+  margin-bottom: 150px;
+  margin-top: 20px;
 }
 
 .hero-content p {
-  font-size: 1rem;
-  color: #517b99;
-  margin-bottom: 30px;
+  font-family: 'Avenir';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #77a8bb;
+  margin-bottom: 150px;
 }
 
 .give-btn {
-  background-color: #ffd100;
-  color: #004d7a;
+  background-color: #ffc907;
+  color: #003366;
   border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
+  padding: 12px 16px;
+  font-size: 1.5rem;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.4s, color 0.4s;
 }
 
-.drop {
-  margin-left: 8px;
+/* Change the give button color when you hover over it */
+.give-btn:hover {
+  background-color: #ff902a; /* Changes to blue */
+  color: #003366;               /* Changes text to white */
 }
+
+/* Impact Story Section */
+.impact-story {
+  display: flex;
+  align-items: center;
+  background-color: #fff7e1; /* Light blue background */
+  padding: 20px 20px;
+  margin: 20px 0;
+}
+
+.impact-image {
+  width: 50%; /* Makes the image smaller */
+  height: auto;
+  margin-right: 30px;
+  border-radius: 30px;
+}
+
+.impact-text h2 {
+  font-size: 4rem;
+  color: #77a8bb;
+  margin-bottom: 150px;
+  text-align: center;
+  font-family: 'Proxima Nova';
+}
+
+.impact-text p {
+  font-size: 2.5rem;
+  color: #77a8bb;
+  text-align: center;
+  font-family: 'Avenir';
+}
+
+/* Donation Section */
+.donation-section {
+  text-align: center;
+  background-color: #fff7e1;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+
+.donation-section h2 {
+  font-size: 1.5rem;
+  color: #2e9df7;
+  margin-bottom: 10px;
+}
+
+.donation-section p {
+  font-size: 1rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.donate-btn {
+  background-color: #ffc907;
+  color: #003366;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 5px auto;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* Change the donate button color when you hover over it */
+.donate-btn:hover {
+  background-color: #ff902a; /* Changes to blue */
+  color: #003366;               /* Changes text to white */
+}
+
+/* For screens 600px and below (like phones) */
+@media (max-width: 600px) {
+  /* Stack header items vertically */
+  .header {
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  /* Stack hero section items vertically */
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Make hero image take full width */
+  .hero-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Make hero content take full width */
+  .hero-content {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Smaller text for small screens */
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+
+  /* Stack impact section vertically */
+  .impact-story {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+  .impact-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .impact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .impact-text p {
+    font-size: 1.2rem;
+  }
+
+  /* Donation section text smaller */
+  .donation-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .donation-section p {
+    font-size: 1rem;
+  }
+}
+
+/* For screens above 600px (like tablets and computers) */
+@media (min-width: 601px) {
+  /* Keep everything as in your original design */
+  .header {
+    flex-direction: row;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .hero-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hero-image {
+    width: 60%;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content {
+    max-width: 600px;
+    margin-right: 5px;
+    padding: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+
+  .hero-content p {
+    font-size: 2rem;
+    margin-bottom: 150px;
+  }
+
+  .impact-story {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  .impact-image {
+    width: 50%;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .impact-text h2 {
+    font-size: 4rem;
+    margin-bottom: 150px;
+  }
+
+  .impact-text p {
+    font-size: 2.5rem;
+  }
+
+  .donation-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .donation-section p {
+    font-size: 1rem;
+  }
+}
+
